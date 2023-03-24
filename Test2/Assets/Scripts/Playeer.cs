@@ -11,17 +11,13 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.W))
         {
-            transform.Translate(transform.up * speed * Time.deltaTime);
+            transform.Translate(transform.up * speed * Time.deltaTime * 3);
         } 
-        else if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(transform.right * speed * Time.deltaTime * -1);
         } 
-        else if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(transform.up * speed * Time.deltaTime * -1);
-        } 
-        else if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(transform.right * speed * Time.deltaTime);
         }
